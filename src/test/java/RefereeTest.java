@@ -9,34 +9,34 @@ public class RefereeTest {
     @Test
     void rockBeatsScissors() {
         Referee r = new Referee();
-        assertEquals(Outcome.PLAYER1_WIN, r.decide(Move.ROCK, Move.SCISSORS));
+        assertEquals(Outcome.PLAYER1_WIN, r.decide(Move.PEDRA, Move.TESOURA));
     }
 
     @Test
     void paperBeatsRock() {
         Referee r = new Referee();
-        assertEquals(Outcome.PLAYER1_WIN, r.decide(Move.PAPER, Move.ROCK));
+        assertEquals(Outcome.PLAYER1_WIN, r.decide(Move.PAPEL, Move.PEDRA));
     }
 
     @Test
     void scissorsBeatsPaper() {
         Referee r = new Referee();
-        assertEquals(Outcome.PLAYER1_WIN, r.decide(Move.SCISSORS, Move.PAPER));
+        assertEquals(Outcome.PLAYER1_WIN, r.decide(Move.TESOURA, Move.PAPEL));
     }
 
     @Test
     void drawSameMove() {
         Referee r = new Referee();
-        assertEquals(Outcome.DRAW, r.decide(Move.ROCK, Move.ROCK));
-        assertEquals(Outcome.DRAW, r.decide(Move.PAPER, Move.PAPER));
-        assertEquals(Outcome.DRAW, r.decide(Move.SCISSORS, Move.SCISSORS));
+        assertEquals(Outcome.DRAW, r.decide(Move.PEDRA, Move.PEDRA));
+        assertEquals(Outcome.DRAW, r.decide(Move.PAPEL, Move.PAPEL));
+        assertEquals(Outcome.DRAW, r.decide(Move.TESOURA, Move.TESOURA));
     }
 
     @Test
     void player2Wins() {
         Referee r = new Referee();
-        assertEquals(Outcome.PLAYER2_WIN, r.decide(Move.SCISSORS, Move.ROCK));
-        assertEquals(Outcome.PLAYER2_WIN, r.decide(Move.ROCK, Move.PAPER));
-        assertEquals(Outcome.PLAYER2_WIN, r.decide(Move.PAPER, Move.SCISSORS));
+        assertEquals(Outcome.PLAYER2_WIN, r.decide(Move.TESOURA, Move.PEDRA));
+        assertEquals(Outcome.PLAYER2_WIN, r.decide(Move.PEDRA, Move.PAPEL));
+        assertEquals(Outcome.PLAYER2_WIN, r.decide(Move.PAPEL, Move.TESOURA));
     }
 }
