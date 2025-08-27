@@ -126,15 +126,6 @@ mvn test -Dtest=RefereeTest
 - **Enums**: `Move` e `Outcome` para representar estados fixos
 - **Separação de Responsabilidades**: Cada classe tem uma responsabilidade específica
 
-## 🔍 Próximos Passos para Aprendizado
-
-- [ ] Implementar mais tipos de bots (estratégicos, que aprendem)
-- [ ] Adicionar mais testes unitários para todas as classes
-- [ ] Implementar testes de integração
-- [ ] Adicionar logging com SLF4J
-- [ ] Criar uma interface gráfica simples
-- [ ] Implementar persistência de estatísticas
-
 ## 📄 Licença
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
