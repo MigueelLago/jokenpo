@@ -33,8 +33,10 @@ public class Match {
                 case DRAW -> draws++;
             }
 
-            System.out.println("Rodada " + i + ": " + player1.name() + " " + move1 + " x " + move2 + " " + player2.name() + " => " + outcome);
-        }
+            System.out.println("Rodada " + i + ":");
+            System.out.println(player1.name() + " jogou " + move1);
+            System.out.println(player2.name() + " jogou " + move2);
+            System.out.println("Resultado: " + outcome.toString());        }
 
         System.out.println("Placar: " + player1.name() + " " + player1Score + " x " + player2Score + " " + player2.name() + " (empates " + draws + ")");
 
