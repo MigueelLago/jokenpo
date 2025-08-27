@@ -23,12 +23,12 @@ public class HumanPlayer implements Player {
 
     @Override
     public Move nextMove() {
-        System.out.print("Escolha sua jogada ([R] para Pedra, [P] para Papel ou [T] para tesoura): ");
+        System.out.print("Escolha sua jogada ([r] para Pedra, [p] para Papel ou [t] para tesoura): ");
         String value = scanner.nextLine().trim().toLowerCase(Locale.ROOT);
         return switch (value) {
-            case "r", "pedra" -> Move.ROCK;
-            case "p", "papel" -> Move.PAPER;
-            case "t", "tesoura" -> Move.SCISSORS;
+            case "r", "pedra" -> Move.PEDRA;
+            case "p", "papel" -> Move.PAPEL;
+            case "t", "tesoura" -> Move.TESOURA;
             default -> nextMove();
         };
     }
